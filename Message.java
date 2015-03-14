@@ -17,21 +17,16 @@ public class Message implements Serializable
     public static enum Method {
         GET, POST, PUT, DELETE, CONNECT
     }
-
-    public static enum Type {
-    	REGISTER, LOGIN, HAS_VOTED, VOTE, CANDIDATES, RESULTS
-    }
     
     private static final long serialVersionUID 
         = -4507489610617393544L;
 
-    private Object  data; // could be a String, or a Vote object 
-    private Method  method;
-    private long    checksum;
-    private int     length;
-    private int     senderPort;
-//    private Type  	type;
-    private String type;
+    private Object      data; // could be a String, or a Vote object 
+    private Method      method;
+    private long        checksum;
+    private int         length;
+    private int         senderPort;
+    private String      type;
     private InetAddress senderAddr; 
 
 
